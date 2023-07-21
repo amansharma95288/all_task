@@ -1,0 +1,16 @@
+/* Write your code here: */
+h1,h2{
+    color: green;
+}
+div p.done{
+    color: #ff0000;
+}
+.list{
+    color: blue;
+}
+.done{
+    color: green;
+}
+p.done{
+    color: black;
+}
