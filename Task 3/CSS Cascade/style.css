@@ -8,14 +8,20 @@
 p {
   color: yellow;
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  font-size: 200%;
+
 }
 .white-text{
   background-color: red;
   color: white;
 }
-.outer-box{
-  border: 10px;
+
+#outer-box{
+  border: 1.2em solid rgb(77, 24, 100);
   padding: 10px;
-  border-color: purple;
+}
+.box-inner-box{
+  padding: 10px;
+  background-color: red;
 }

@@ -8,20 +8,24 @@
   <title>CSS Positioning Exercise</title>
   <style>
     /* Write your code here */
-    .blue-box{
-      display: block;
-      height: 300px;
+
+    
+    .blue-box{ 
       width: 500px;
-      margin-top: 200px;
-      margin-left: 200px;
-      background-color: blue;
+      height: 300px;
+      position: relative;
+      top: 200px;
+      left: 200px; 
+      background-color: blue; 
     }
     .red-circle{
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
       background-color: red;
-      border-radius: 100px;
-      width: 150px;
-      height: 150px;
-      
+      position: absolute;
+      top: 150px;
+      left: 250px;
     }
   </style>
 </head>
@@ -35,3 +39,6 @@
 </body>
 
 </html>
+
+
+ 
