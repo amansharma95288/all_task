@@ -1,0 +1,55 @@
+<!-- BMI CALCULATOR USING JAVASCRIPT -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>bmi calculator</title>
+
+</head>
+<body>
+    <div class="container bg-dark">
+        <div class="card">
+            <div class="card-header text-center bg-danger text-white">BMI CALCULATOR</div>
+            <div class="card-body">
+              <form class="w-50 m-auto "onsubmit="return false">
+              <div class="form-group">
+                <label >Weight:</label>
+                <input type="number" name="" required id="weight" placeholder="Weight in kg" class="form-control">
+                </div>
+                <div class="form-group">
+                <label>Height:</label>
+                <input type="text"required id="height" placeholder="Height in ft" class="form-control">
+                </div>
+                <div class="form-group">
+                <label>BMI Value:</label>
+                <input type="number" id="Bmivalue" class="form-control">
+                </div>
+                <div>
+                <button type="submit" class="btn btn-success w-35 m-auto " onclick="getbmivalue()">CHECK BMI</button>
+              </div>
+              </form>
+            </div>
+            <div class="card-footer text-center bg-danger text-white">A healthy BMI ranges between 19 to 25.</div>
+        </div>
+        
+    </div>
+    <script>
+        function getbmivalue()
+        {
+            var weight = document.getElementById("weight").value;
+            var height = document.getElementById("height").value;
+            height = height * 12;
+            height = height * 0.025; //now height in meter..
+            
+            var newbmivalue = weight / Math.pow(height,2);
+            newbmivalue = Math.round(newbmivalue);
+            document.getElementById("Bmivalue").value = newbmivalue;
+
+        }
+    </script>
+</body>
+</html>

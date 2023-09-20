@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>avg-temp</title>
+</head>
+<body>
+    <script>
+        var temp=[12,32,54,55,22,66,54,99];
+        var sum=0;
+        function avg_temp(){
+            for(var i=0;i<temp.length;i++){
+                sum=sum+temp[i];
+            }
+        }
+        avg_temp();
+        var cal=sum/temp.length;
+        document.write("the average temperature of day is ->> "+ cal + "C");
+    </script>
+    <span>&#176</span>
+</body>
+</html>

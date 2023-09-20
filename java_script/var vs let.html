@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var_vs_let</title>
+</head>
+<body>
+    <h1>In the early days of JavaScript, there was only one way of declaring variables and that was using the var keyword. A variable declared with var is defined throughout the program. One of the issues with using the var keyword was redeclaring a variable inside a block will also redeclare the variable outside the block. </h1>
+    <!-- let's start with the var coding  -->
+    <button onclick="colour()">play</button>
+    <script>
+    // console.log(x);
+    // var x=5;
+    // console.log(x);
+
+    // now we'll use let code to understand the concept 
+    // console.log(x);
+    // let x=5;
+    // console.log(x);
+
+
+    // calling x after definition
+     var x = 5;
+    document.write(x, "\n");
+     
+    // calling y after definition
+    let y = 10;
+    document.write(y, "\n");
+     
+    // calling var z before definition will return undefined
+    document.write(z, "\n");
+    var z = 2;
+     
+    // calling let a before definition will give error
+    document.write(a);
+    let a = 3;
+
+    
+    function colour() {
+     
+     setInterval(function() {
+  
+         if (document.getElementById('var').style.color == 'black')
+             var col1 = 'blue';
+         else
+             col1 = 'black';
+  
+         // setting value of color 1 through var
+         if (document.getElementById('let').style.color == 'black') {
+             let col2 = 'red';
+         } else {
+             col2 = 'black';
+         }
+  
+         // setting value of color 2 through let
+         document.getElementById('var').style.color = col1;
+  
+         document.getElementById('let').style.color = col2;
+  
+         // changing color of h1 in html
+     }, 500);
+  
+ }
+    </script>
+</body>
+</html>
